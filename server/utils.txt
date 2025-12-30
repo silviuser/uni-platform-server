@@ -1,0 +1,6 @@
+npm init
+npm install
+npm install mysql2
+npm install sequelize
+npm install dotenv
+npm install --save-dev nodemon

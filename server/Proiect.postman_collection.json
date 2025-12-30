@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "b34c88fb-bb57-4b99-a650-cafe28aebf35",
+		"name": "Proiect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51032434",
+		"_collection_link": "https://silviuser-7174380.postman.co/workspace/Silviu-Serban's-Workspace~fe888ff0-29a7-43dc-85b3-b985594ac7a9/collection/51032434-b34c88fb-bb57-4b99-a650-cafe28aebf35?action=share&source=collection_link&creator=51032434"
+	},
+	"item": [
+		{
+			"name": "CreateDBRouter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/api/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateStudent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"stud@example.com\",\"password\":\"Secret123\",\"fullName\":\"Test Student\",\"group\":\"C314\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStudentByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/students/89a2b6dc-73b3-45c2-b72e-8f5d16b94878",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students",
+						"89a2b6dc-73b3-45c2-b72e-8f5d16b94878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStudentByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/students/by-email?email=stud@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students",
+						"by-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "stud@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProfessor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"prof@example.com\",\"password\":\"Secret123\",\"fullName\":\"Prof. Dr. Popescu\",\"department\":\"Informatica\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/professors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"professors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"professorId\":\"4b7d9a5b-cfe6-4d22-b7bd-e183669e872b\",\"description\":\"Sesiune Licență Iulie\",\"startTime\":\"2024-07-01T09:00:00Z\",\"endTime\":\"2024-07-01T12:00:00Z\",\"maxSpots\":30}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"studentId\":\"89a2b6dc-73b3-45c2-b72e-8f5d16b94878\",\"sessionId\":\"5d09de1f-52aa-4316-9146-1e1dfa00d4f3\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"requests"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
